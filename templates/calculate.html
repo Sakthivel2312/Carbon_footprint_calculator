@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculate Carbon Footprint</title>
+    <link rel="stylesheet" href="static/style2.css">
+</head>
+<body>
+    <div class="main">
+        <!-- Navbar Section -->
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CFC</h2>
+            </div>
+
+        </div>
+        <!-- Content Section -->
+        <div class="content">
+            <h1>Calculate Carbon Footprint</h1>
+            <form id="carbonFootprintForm" action="calculate" method="post">
+                <div class="form-column">
+                    <label for="energy">Energy Consumption per month (kWh):</label>
+                    <input type="number" id="energy" name="energy" required>
+
+                    <label for="fuel">Fuel Combustion per month (Liters):</label>
+                    <input type="number" id="fuel" name="fuel" required>
+
+                    <label for="methane">Methane Emissions per month (kg):</label>
+                    <input type="number" id="methane" name="methane" required>
+
+                    <label for="transportation">Transportation Emissions per month (kg):</label>
+                    <input type="number" id="transportation" name="transportation" required>
+                </div>
+
+                <div class="form-column">
+                    <label for="commute">Employee On-Site Emissions per month (kg):</label>
+                    <input type="number" id="commute" name="commute" required>
+
+                    <label for="waste">Waste Management per month (kg):</label>
+                    <input type="number" id="waste" name="waste" required>
+
+                    <label for="water">Water Usage per month (Liters):</label>
+                    <input type="number" id="water" name="water" required>
+
+                    <label for="land">Land Use Changes per month (sq m):</label>
+                    <input type="number" id="land" name="land" required>
+                </div>
+
+                <div class="button-container">
+                    <button type="submit">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Background */
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url(bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.icon .logo {
+    color: #eaeeea;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.menu ul li a:hover {
+    color: #014705;
+}
+
+/* Content Styling */
+.content {
+    width: 800px;
+    margin: 50px auto;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+}
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Form Styling */
+#carbonFootprintForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-column {
+    width: 45%;
+}
+
+#carbonFootprintForm label {
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    margin-top: 15px;
+}
+
+#carbonFootprintForm input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.button-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+#carbonFootprintForm button {
+    width: 100%;
+    padding: 10px;
+    background: #76b852;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#carbonFootprintForm button:hover {
+    background: #5e9a42;
+}

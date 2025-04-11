@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Background */
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.icon .logo {
+    color: #eaeeea;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.menu ul li a:hover {
+    color: #014705;
+}
+
+/* Content Styling */
+.content {
+    width: 800px;
+    margin: 50px auto;
+    color: #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+#result-container {
+    text-align: center;
+}
+
+#total-footprint {
+    font-size: 24px;
+    font-weight: bold;
+    color: #76b852;
+}
+
+/* Chart Styling */
+canvas {
+    margin-top: 20px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+/* Row layout for footprint sections */
+.footprint-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Transparent box styling for footprint sections */
+.footprint-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px; /* Width for each box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footprint-box h3 {
+    margin-bottom: 15px;
+}
+
+.footprint-box p {
+    margin: 5px 0;
+}

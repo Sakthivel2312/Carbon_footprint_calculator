@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Results</title>
+    <link rel="stylesheet" href="static/style3.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CFC</h2>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Carbon Footprint Results</h1>
+            <div id="result-container">
+                <h2>Total Carbon Footprint: <span id="total-footprint">{{ total_footprint }}</span> kg</h2>
+
+                <!-- Container for footprint data boxes -->
+                <div class="footprint-row">
+                    <!-- Transparent box for Monthly Carbon Footprint -->
+                    <div class="footprint-box">
+                        <h3>Monthly Carbon Footprint (kg CO₂)</h3>
+                        <p>Energy: {{ energy_monthly }}</p>
+                        <p>Fuel: {{ fuel_monthly }}</p>
+                        <p>Methane: {{ methane_monthly }}</p>
+                        <p>Transportation: {{ transportation_monthly }}</p>
+                        <p>Commute: {{ commute_monthly }}</p>
+                        <p>Waste: {{ waste_monthly }}</p>
+                        <p>Water: {{ water_monthly }}</p>
+                        <p>Land: {{ land_monthly }}</p>
+                    </div>
+
+                    <!-- Transparent box for Yearly Carbon Footprint -->
+                    <div class="footprint-box">
+                        <h3>Yearly Carbon Footprint (kg CO₂)</h3>
+                        <p>Energy: {{ energy_yearly }}</p>
+                        <p>Fuel: {{ fuel_yearly }}</p>
+                        <p>Methane: {{ methane_yearly }}</p>
+                        <p>Transportation: {{ transportation_yearly }}</p>
+                        <p>Commute: {{ commute_yearly }}</p>
+                        <p>Waste: {{ waste_yearly }}</p>
+                        <p>Water: {{ water_yearly }}</p>
+                        <p>Land: {{ land_yearly }}</p>
+                    </div>
+                </div>
+
+                <!-- Chart.js Bar Chart -->
+                <canvas id="footprintChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data for bar chart
+        const data = {
+            labels: ['Energy', 'Fuel', 'Methane', 'Transportation', 'Commute', 'Waste', 'Water', 'Land'],
+            datasets: [{
+                label: 'Carbon Footprint (kg) per Year',
+                data: [
+                    {{ energy_yearly }},
+                    {{ fuel_yearly }},
+                    {{ methane_yearly }},
+                    {{ transportation_yearly }},
+                    {{ commute_yearly }},
+                    {{ waste_yearly }},
+                    {{ water_yearly }},
+                    {{ land_yearly }}
+                ],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 71, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(201, 203, 207, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 71, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        // Configuration for bar chart
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Render bar chart
+        const footprintChart = new Chart(
+            document.getElementById('footprintChart'),
+            config
+        );
+    </script>
+</body>
+</html>
